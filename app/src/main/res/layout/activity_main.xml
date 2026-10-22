@@ -1,0 +1,31 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <!--  Cadastro  -->
+        <EditText android:id="@+id/editProductName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nome do Produto" android:inputType="textCapSentences"/>
+        <EditText android:id="@+id/editProductPrice" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Preço" android:inputType="numberDecimal"/>
+        <EditText android:id="@+id/editProductDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Descrição" android:inputType="textCapSentences"/>
+        <!--  A8: novo campo  -->
+        <EditText android:id="@+id/editProductQuantity" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Quantidade em estoque" android:inputType="number"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/btnInserirProduto" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginEnd="4dp" android:layout_weight="1" android:text="Inserir Produto"/>
+            <Button android:id="@+id/btnListarProdutos" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="4dp" android:layout_weight="1" android:text="Listar Produtos"/>
+        </LinearLayout>
+        <!--  A5: busca por nome  -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Buscar por nome" android:textStyle="bold"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <EditText android:id="@+id/editBusca" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Digite parte do nome" android:inputType="text"/>
+            <Button android:id="@+id/btnBuscar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Buscar"/>
+        </LinearLayout>
+        <!--  A7 e A6: atualizar preço / excluir por ID  -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Atualizar preço ou excluir por ID" android:textStyle="bold"/>
+        <EditText android:id="@+id/editProductId" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="ID do produto" android:inputType="number"/>
+        <EditText android:id="@+id/editNovoPreco" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Novo preço" android:inputType="numberDecimal"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/btnAtualizarPreco" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginEnd="4dp" android:layout_weight="1" android:text="Atualizar Preço"/>
+            <Button android:id="@+id/btnExcluirPorId" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="4dp" android:layout_weight="1" android:text="Excluir por ID"/>
+        </LinearLayout>
+        <Button android:id="@+id/btnExcluirTodos" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Excluir Todos"/>
+        <!--  A3 e A4: lista, quantidade e soma  -->
+        <TextView android:id="@+id/textResultado" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textIsSelectable="true" android:textSize="14sp"/>
+    </LinearLayout>
+</ScrollView>
